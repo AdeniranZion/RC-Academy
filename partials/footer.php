@@ -1,0 +1,64 @@
+<!-- footer section starts  -->
+
+<section class="footer">
+
+   <div class="box-container">
+
+      <div class="box">
+         <h3> <img style="margin-bottom: -3%;" src="images/RCALogo.png" width="50"> Royal Coast Academy </h3>
+         <p>Empowering young minds into becoming better versions of themselves - The Leaders of tomorrow</p>
+         <div class="share">
+            <a href="#" class="fa-brands fa-facebook-f"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="https://www.instagram.com/royalcoastacademy/" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+            <a href="#" class="fa-brands fa-whatsapp"></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3>Reach Us</h3>
+         <a href="home.html" class="link"><i class="fa-solid fa-phone"></i> <span> +234 802 766 4776</span></a>
+         <a href="home.html" class="link"><i class="fa-sharp fa-solid fa-envelope"></i><span> royalcoastacademy@gmail.com</span></a>
+         <a href="home.html" class="link"><i class="fa-solid fa-location-dot"></i><span> 10 Oluwole Daramola, Off Mabinuori, Opic Bus stop, Lagos - Ibadan Expressway, Ogun State.</span></a>
+      </div>
+
+      <div class="box">
+         <h3>Quick links</h3>
+         <a href="#" class="link">Admissions</a>
+         <a href="#" class="link">News and Events</a>
+         <a href="#" class="link">Photo Gallery</a>
+         <a href="#" class="link">Parents Forum</a>
+         <a href="#" class="link">Job Oppurtunities</a>
+         <a href="#" class="link">Help and Support</a>
+      </div>
+
+      <div class="box">
+         <h3>newsletter</h3>
+         <p>Subscribe for latest upadates</p>
+         <form action="">
+            <input type="email" name="" placeholder="enter your email" id="" class="email">
+            <input type="submit" value="subscribe" class="btn">
+         </form>
+      </div>
+
+   </div>
+
+   <div class="credit">&copy; <?php echo date("Y");?> Royal Coast Academy. all rights reserved. </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@7.4.1/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script src="js/aos.js"></script>

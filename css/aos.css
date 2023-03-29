@@ -1,0 +1,11 @@
+/* Fade-in from the right animation */
+[data-aos="fade-right"] {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  [data-aos="fade-right"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }

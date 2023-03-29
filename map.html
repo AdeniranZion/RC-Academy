@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map Example</title>
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Map Example</h1>
+    <div id="map"></div>
+    <script>
+        // Set the location to be shown on the map
+        const latitude = 37.7749;
+        const longitude = -122.4194;
+
+        // Initialize the map
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: { lat: latitude, lng: longitude },
+            });
+
+            // Add a marker to the map
+            const marker = new google.maps.Marker({
+                position: { lat: latitude, lng: longitude },
+                map: map,
+                title: "Location",
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1icNMxFZLgneTBqsQpyh8jsHxp1OYG5E&callback=initMap" async defer></script>
+</body>
+</html>
+
+
+
+
+
+
