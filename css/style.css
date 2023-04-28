@@ -151,6 +151,7 @@ section {
 
 .header .navbar a:hover {
   color: #e070dd;
+  background-color: #fff;
 }
 
 .header .icons div {
@@ -168,13 +169,64 @@ section {
   display: none;
 }
 
+/* Fade Background */
+.parent {
+  position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 10vh;
+   /* background-color: #FFE7FE; */
+   padding: 10px;
+ }
+
+ .text {
+   text-align: center;
+ }
+
+
+.containerbackground {
+     margin: 3rem;
+     position: absolute;
+     top: -20%;
+     left: -20%;
+     bottom: -20%;
+     right: -20%;
+     z-index: -1;
+     transform: rotate(0deg);
+     color: #c6afaf;
+     font-size: 10rem;
+     line-height: 1.2;
+     text-align: center;
+     padding: 1rem;
+     opacity: 0.2;
+   }
+
+ .about-title {
+ position: relative;
+ z-index: 1;
+}
+
+.about-title::before {
+ content: attr(data-text);
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -1;
+ text-shadow: 0 0 10px rgba(246, 112, 242, 0.5);
+ font-size: 60px;
+ color: #fff;
+}
+
+
  /* Style for the button */
  .top-btn {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 99;
+  z-index: 999;
   font-size: 18px;
   border: none;
   outline: none;
@@ -185,6 +237,12 @@ section {
   border-radius: 10%;
   box-shadow: 0 0 10px rgb(132, 132, 132);
 }
+
+.fade-in-effect {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
 
 /* Animation for the button */
 .top-btn-fadein {
@@ -213,6 +271,69 @@ section {
   to {
     opacity: 0;
   }
+}
+
+
+@media (max-width: 768px) {
+  .top-btn {
+    bottom: 40px;
+    right: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-btn {
+    bottom: 60px;
+    right: 30px;
+  }
+}
+
+
+.scroll-div {
+  position: -webkit-sticky;
+ position: sticky;
+ top: 0;
+ left: 0;
+ right: 0;
+ background: #fff;
+ -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+ padding: 2rem 10%;
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-align: center;
+     -ms-flex-align: center;
+         align-items: center;
+ z-index: 1000;
+ white-space: nowrap;
+ overflow: hidden;
+ background-color: #671470;
+}
+  .scroll-text {
+ position: fixed;
+ width: 100%;
+ top: 0;
+ right: 0;
+ white-space: nowrap;
+ overflow: hidden;
+ animation: scroll 30s linear infinite;
+ color: #fff;
+ display: flex;
+}
+
+.scroll-text h1{
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+@keyframes scroll {
+ 0% {
+   transform: translateX(100%);
+ }
+ 100% {
+   transform: translateX(-100%);
+ }
 }
 
 .account-form {
@@ -848,8 +969,8 @@ section {
 }
 
 .contact .row form .box:focus {
-  background: #e070dd;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 
 .contact .row form .box:focus::-webkit-input-placeholder {
@@ -1070,7 +1191,7 @@ section {
     position: fixed;
     top: 0;
     right: -105%;
-    width: 30rem;
+    width: 40rem;
     background: #fff;
     height: 100%;
     display: -webkit-box;

@@ -3,6 +3,12 @@
 <html lang="en">
   <head>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-R8rHrSyN1bJ58gvc/mwMMJ8e4+HWH1e4Y1G5jJtFQOaxo0cSyzkkPfwGH0w3qZ1zGZlFwhRv/QJMS1pd8yJtxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/aos.css">
+<link rel="stylesheet" href="css/qlstyle.css">
+
   <title>Royal Coast Academy</title>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
@@ -25,11 +31,21 @@
 
 <!-- //Go to top Button -->
 <button onclick="topFunction()" class="top-btn" id="myBtn" title="Go to top"><img width="50%" src="images/chevron_up1.png" alt=""></button>
+</head>
+
+<body>
 
 
 <!-- header section starts  -->
+<div class="scroll-div">
+   <div class="scroll-text">
+      <h1>Have any questions? <i class="fa-solid fa-phone"></i> +2348027664776 +2347059695895 +2349030009521 royalcoastacademy@gmail.com</h1>
+   </div>
+</div>
+
 
 <header class="header">
+
 
    <a href="#" class="logo"> <img style="margin-bottom: -3%;" src="images/RCALogo.png" width="45"> Royal Coast Academy </a>
 
@@ -42,7 +58,7 @@
             $current_page = basename($_SERVER['PHP_SELF']);
             $links = array(
                array('text' => 'HOME', 'href' => 'index.php'),
-               array('text' => 'ABOUT', 'href' => 'about.php'),
+               array('text' => 'ABOUT US', 'href' => 'about.php'),
                array('text' => 'COURSES', 'href' => 'courses.php'),
                array('text' => 'CONTACT US', 'href' => 'contact.php'),
                array('text' => 'EVENTS', 'href' => 'calender.php')
@@ -102,5 +118,19 @@
 
 <!-- header section ends -->
 </div>
-</head>
-<body>
+
+<script>
+    AOS.init({
+        duration: 800, // animation duration in milliseconds
+        offset: 200, // offset (in pixels) from the top of the page for the start of the animation
+        easing: 'ease-out', // easing function to use for the animation
+        once: true, // only animate elements once on page load
+    });
+
+      // Refresh AOS on scroll event
+      window.addEventListener('scroll', function() {
+      AOS.refresh();
+});
+  </script>
+  
+</body>

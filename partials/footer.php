@@ -1,5 +1,6 @@
 <!-- footer section starts  -->
 
+
 <section class="footer">
 
    <div class="box-container">
@@ -18,19 +19,19 @@
 
       <div class="box">
          <h3>Reach Us</h3>
-         <a href="home.html" class="link"><i class="fa-solid fa-phone"></i> <span> +234 802 766 4776</span></a>
-         <a href="home.html" class="link"><i class="fa-sharp fa-solid fa-envelope"></i><span> royalcoastacademy@gmail.com</span></a>
-         <a href="home.html" class="link"><i class="fa-solid fa-location-dot"></i><span> 10 Oluwole Daramola, Off Mabinuori, Opic Bus stop, Lagos - Ibadan Expressway, Ogun State.</span></a>
+         <a href="#" class="link"><i class="fa-solid fa-phone"></i> <span> +234 802 766 4776</span></a>
+         <a href="#" class="link"><i class="fa-sharp fa-solid fa-envelope"></i><span> royalcoastacademy@gmail.com</span></a>
+         <a href="https://www.google.com/maps/place/Royal+Coast+Academy/@6.6436294,3.3875633,17z/data=!4m15!1m8!3m7!1s0x103b937ae5824571:0xccc23bd1c27304eb!2s10+Oluwole+Daramola+Cres,+Isheri+Oke+102109,+Ojodu+Berger,+Ogun+State!3b1!8m2!3d6.6436294!4d3.3875633!16s%2Fg%2F11sk8n63bg!3m5!1s0x103b9320de5d0e97:0x8af30d24481b53f6!8m2!3d6.6436294!4d3.3875633!16s%2Fg%2F11smwgcrfj" class="link"><i class="fa-solid fa-location-dot"></i><span> 10 Oluwole Daramola, Off Mabinuori, Opic Bus stop, Lagos - Ibadan Expressway, Ogun State.</span></a>
       </div>
 
       <div class="box">
          <h3>Quick links</h3>
-         <a href="#" class="link">Admissions</a>
-         <a href="#" class="link">News and Events</a>
-         <a href="#" class="link">Photo Gallery</a>
-         <a href="#" class="link">Parents Forum</a>
-         <a href="#" class="link">Job Oppurtunities</a>
-         <a href="#" class="link">Help and Support</a>
+         <a href="admissions.php" class="link">Admissions</a>
+         <a href="unavailable.php" class="link">News and Events</a>
+         <a href="unavailable.php" class="link">Photo Gallery</a>
+         <a href="unavailable.php" class="link">Parents Forum</a>
+         <a href="unavailable.php" class="link">Job Oppurtunities</a>
+         <a href="unavailable.php" class="link">Help and Support</a>
       </div>
 
       <div class="box">

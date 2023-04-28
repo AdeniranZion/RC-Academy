@@ -1,5 +1,5 @@
 <?php include_once "partials/header.php"; ?>
-   
+  
 <!-- account form section starts  -->
 
 <div class="account-form">
@@ -39,18 +39,18 @@
 
 <section class="heading-link"> 
    <h3>about <span style="color: #e070dd;">us</span></h3>
-   <p> <a href="home.html">home</a> / about </p>
+   <p> <a href="index.php">home</a> / about </p>
 </section>
 
 <!-- about section starts  -->
 
 <section class="about">
 
-   <div class="image">
+   <div class="image" data-aos="fade-right" data-aos-duration="1000">
       <img src="images/about-img.jpg" alt="">
    </div>
 
-   <div class="content">
+   <div class="content" data-aos="fade-left" data-aos-duration="1000">
       <h3 class="about-title">we have best courses for you</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam hic magnam fugit exercitationem neque, quae laboriosam natus. Ut maxime assumenda facere ea quasi accusamus dolores delectus tempora animi, expedita iste.</p>
       <div class="icons-container">
@@ -78,7 +78,129 @@
 
 <!-- teachers section starts  -->
 
-<section class="teachers">
+<section class="teachers" data-aos="fade-right" data-aos-duration="1000">
+
+<section class="text-background" data-text="Hello World">
+   <div class="clone">Hello World </div>
+</section>
+
+
+
+
+<h1 class="heading">It all starts here</h1>
+
+   <div class="swiper teachers-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="images/teacher-1.png" alt="">
+               <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                  <a href="#" class="fab fa-linkedin"></a>
+               </div>
+            </div>
+            <div class="content">
+               <h3>john deo</h3>
+               <span>expert tutor</span>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="images/teacher-2.png" alt="">
+               <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                  <a href="#" class="fab fa-linkedin"></a>
+               </div>
+            </div>
+            <div class="content">
+               <h3>john deo</h3>
+               <span>expert tutor</span>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="images/teacher-3.png" alt="">
+               <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                  <a href="#" class="fab fa-linkedin"></a>
+               </div>
+            </div>
+            <div class="content">
+               <h3>john deo</h3>
+               <span>expert tutor</span>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="images/teacher-4.png" alt="">
+               <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                  <a href="#" class="fab fa-linkedin"></a>
+               </div>
+            </div>
+            <div class="content">
+               <h3>john deo</h3>
+               <span>expert tutor</span>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="images/teacher-5.png" alt="">
+               <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                  <a href="#" class="fab fa-linkedin"></a>
+               </div>
+            </div>
+            <div class="content">
+               <h3>john deo</h3>
+               <span>expert tutor</span>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="images/teacher-6.png" alt="">
+               <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                  <a href="#" class="fab fa-linkedin"></a>
+               </div>
+            </div>
+            <div class="content">
+               <h3>john deo</h3>
+               <span>expert tutor</span>
+            </div>
+         </div>
+         
+      </div>
+
+   </div>
+
+</section>
+
+<!-- teachers section ends -->
+
+
+<!-- teachers section starts  -->
+
+<section class="teachers" data-aos="fade-up" data-aos-duration="1000">
 
    <h1 class="heading">Meet our Teachers</h1>
 
@@ -194,7 +316,17 @@
 
 <section class="reviews">
 
-   <h1 class="heading"> our students review </h1>
+   <h1 class="heading"> our parents review </h1>
+   <style>
+      .rect{
+         height: 10px;
+         width: 10px;
+         position: relative;
+         border-radius: 5px;
+         color: red;
+      }
+   </style>
+   <div class="rect"></div>
 
    <div class="swiper reviews-slider">
 
