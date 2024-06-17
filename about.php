@@ -1,432 +1,106 @@
 <?php include_once "partials/header.php"; ?>
-  
-<!-- account form section starts  -->
-
-<div class="account-form">
-
-   <div id="close-form" class="fas fa-times"></div>
-
-   <div class="buttons">
-      <span class="btn active login-btn">login</span>
-      <span class="btn register-btn">register</span>
-   </div>
-
-   <form class="login-form active" action="">
-      <h3>login now</h3>
-      <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
-      <div class="flex">
-         <input type="checkbox" name="" id="remember-me">
-         <label for="remember-me">remember me</label>
-         <a href="#">forgot password?</a>
-      </div>
-      <input type="submit" value="login now" class="btn">
-   </form>
-
-   <form class="register-form" action="">
-      <h3>register now</h3>
-      <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
-      <input type="password" placeholder="confirm your password" class="box">
-      <input type="submit" value="register now" class="btn">
-   </form>
-
-</div>
-
-<!-- account form section ends -->
 
 <!-- header section ends -->
 
-<section class="heading-link"> 
+<!-- <section class="heading-link"> 
    <h3>about <span style="color: #e070dd;">us</span></h3>
    <p> <a href="index.php">home</a> / about </p>
+</section> -->
+
+
+<!-- About Header Section -->
+<section class="about-header">
+  <div class="image-container">
+    <img src="images/image1.jpg" alt="First Image">
+    <img src="images/image2.jpg" alt="Second Image">
+    <img src="images/image3.jpg" alt="Third Image">
+  </div>
 </section>
 
-<!-- about section starts  -->
 
-<section class="about">
+  <!-- Mission Statement Section -->
+  <section class="mission">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Mission</h2>
+      <p class="section-description" data-aos="fade-up" data-aos-delay="200">At Royal Coast Academy, we are committed to fostering academic excellence and moral integrity. We aim to develop well-rounded individuals who are equipped to thrive in a global society. Our inclusive community welcomes students from all backgrounds and celebrates diversity.</p>
+    </div>
+  </section>
 
-   <div class="image" data-aos="fade-right" data-aos-duration="1000">
-      <img src="images/about-img.jpg" alt="">
-   </div>
+  <!-- Vision Statement Section -->
+  <section class="vision">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Vision</h2>
+      <p class="section-description" data-aos="fade-up" data-aos-delay="200">Our vision is to be a leading educational institution renowned for nurturing the full potential of each student. We aspire to create a dynamic learning environment that inspires creativity, critical thinking, and lifelong learning.</p>
+    </div>
+  </section>
 
-   <div class="content" data-aos="fade-left" data-aos-duration="1000">
-      <h3 class="about-title">we have best courses for you</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam hic magnam fugit exercitationem neque, quae laboriosam natus. Ut maxime assumenda facere ea quasi accusamus dolores delectus tempora animi, expedita iste.</p>
-      <div class="icons-container">
-         <div class="icons">
-            <img src="images/about-icon-1.png" alt="">
-            <h3>350+</h3>
-            <span>courses</span>
-         </div>
-         <div class="icons">
-            <img src="images/about-icon-2.png" alt="">
-            <h3>1200+</h3>
-            <span>students</span>
-         </div>
-         <div class="icons">
-            <img src="images/about-icon-3.png" alt="">
-            <h3>10+</h3>
-            <span>awards</span>
-         </div>
+  <!-- Values Section -->
+  <section class="values">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Core Values</h2>
+      <div class="values-grid">
+        <div class="value-item" data-aos="fade-right" data-aos-delay="200">
+          <h3>Excellence</h3>
+          <p>We strive for the highest standards in everything we do.</p>
+        </div>
+        <div class="value-item" data-aos="fade-up" data-aos-delay="400">
+          <h3>Integrity</h3>
+          <p>We believe in honesty, transparency, and strong moral principles.</p>
+        </div>
+        <div class="value-item" data-aos="fade-up" data-aos-delay="600">
+          <h3>Innovation</h3>
+          <p>We embrace creativity and new ideas to advance learning.</p>
+        </div>
+        <div class="value-item" data-aos="fade-left" data-aos-delay="800">
+          <h3>Respect</h3>
+          <p>We foster an environment of mutual respect and inclusivity.</p>
+        </div>
       </div>
-   </div>
+    </div>
+  </section>
 
-</section>
-
-<!-- about section ends -->
-
-<!-- teachers section starts  -->
-
-<section class="teachers" data-aos="fade-right" data-aos-duration="1000">
-
-<section class="text-background" data-text="Hello World">
-   <div class="clone">Hello World </div>
-</section>
-
-
-
-
-<h1 class="heading">It all starts here</h1>
-
-   <div class="swiper teachers-slider">
-
-      <div class="swiper-wrapper">
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-1.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-2.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-3.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-4.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-5.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-6.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-         
+  <!-- Team Section -->
+  <section class="team">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member" data-aos="fade-right" data-aos-delay="200">
+          <img src="images/bassey.jpg" alt="Jane Doe">
+          <h3>Edifon Bassey</h3>
+          <p>Principal</p>
+        </div>
+        <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+          <img src="images/teacher-2.png" alt="John Smith">
+          <h3>John Smith</h3>
+          <p>Vice Principal</p>
+        </div>
+        <div class="team-member" data-aos="fade-up" data-aos-delay="600">
+          <img src="images/teacher-3.png" alt="Emily Johnson">
+          <h3>Emily Johnson</h3>
+          <p>Head of Admissions</p>
+        </div>
+        <div class="team-member" data-aos="fade-left" data-aos-delay="800">
+          <img src="images/teacher-4.png" alt="Michael Brown">
+          <h3>Michael Brown</h3>
+          <p>Head of Academics</p>
+        </div>
       </div>
-
-   </div>
-
-</section>
-
-<!-- teachers section ends -->
-
-
-<!-- teachers section starts  -->
-
-<section class="teachers" data-aos="fade-up" data-aos-duration="1000">
-
-   <h1 class="heading">Meet our Teachers</h1>
-
-   <div class="swiper teachers-slider">
-
-      <div class="swiper-wrapper">
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-1.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-2.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-3.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-4.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-5.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images/teacher-6.png" alt="">
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-            </div>
-            <div class="content">
-               <h3>john deo</h3>
-               <span>expert tutor</span>
-            </div>
-         </div>
-         
-      </div>
-
-   </div>
-
-</section>
-
-<!-- teachers section ends -->
-
-<!-- students reviews section starts  -->
-
-<section class="reviews">
-
-   <h1 class="heading"> our parents review </h1>
-   <style>
-      .rect{
-         height: 10px;
-         width: 10px;
-         position: relative;
-         border-radius: 5px;
-         color: red;
-      }
-   </style>
-   <div class="rect"></div>
-
-   <div class="swiper reviews-slider">
-
-      <div class="swiper-wrapper">
-
-         <div class="swiper-slide slide">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim animi atque numquam harum libero nemo, eligendi laboriosam beatae quo iure corrupti, neque rerum possimus non nisi quia! Cumque, tempora sit.</p>
-            <img src="images/pic-1.png" alt="">
-            <h3>john deo</h3>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim animi atque numquam harum libero nemo, eligendi laboriosam beatae quo iure corrupti, neque rerum possimus non nisi quia! Cumque, tempora sit.</p>
-            <img src="images/pic-2.png" alt="">
-            <h3>john deo</h3>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim animi atque numquam harum libero nemo, eligendi laboriosam beatae quo iure corrupti, neque rerum possimus non nisi quia! Cumque, tempora sit.</p>
-            <img src="images/pic-3.png" alt="">
-            <h3>john deo</h3>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim animi atque numquam harum libero nemo, eligendi laboriosam beatae quo iure corrupti, neque rerum possimus non nisi quia! Cumque, tempora sit.</p>
-            <img src="images/pic-4.png" alt="">
-            <h3>john deo</h3>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim animi atque numquam harum libero nemo, eligendi laboriosam beatae quo iure corrupti, neque rerum possimus non nisi quia! Cumque, tempora sit.</p>
-            <img src="images/pic-5.png" alt="">
-            <h3>john deo</h3>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim animi atque numquam harum libero nemo, eligendi laboriosam beatae quo iure corrupti, neque rerum possimus non nisi quia! Cumque, tempora sit.</p>
-            <img src="images/pic-6.png" alt="">
-            <h3>john deo</h3>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-         </div>
-
-      </div>
-
-   </div>
-
-</section>
-
-<!-- students reviews section ends -->
+    </div>
+  </section>
 
 
 <?php include_once "partials/footer.php"; ?>
 
 
-
-
 <!-- swiper js link  -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
+<!-- AOS Animation Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- <script>
+    AOS.init();
+  </script> -->
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
 

@@ -24,17 +24,22 @@ html {
   overflow-x: hidden;
 }
 
+/* Scrollbar styles for webkit-based browsers */
 html::-webkit-scrollbar {
-  width: 1rem;
+  width: 1rem; /* Default scrollbar width */
 }
 
 html::-webkit-scrollbar-track {
-  background: transparent;
+  background: transparent; /* Transparent track */
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #e6b3e4;
+  background: #e6b3e4; /* Custom thumb color */
+  border-radius: 0.5rem; /* Optional: Add rounding to the scrollbar thumb */
+  border: 2px solid transparent; /* Optional: Add space around the thumb */
+  background-clip: padding-box; /* Prevent border color from overlapping */
 }
+
 
 section {
   padding: 5rem 10%;
@@ -64,7 +69,7 @@ section {
 }
 
 .heading-link p a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .heading {
@@ -77,20 +82,45 @@ section {
 
 .btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 1rem 3rem;
-  font-size: 1.8rem;
-  border: 0.1rem solid #e070dd;
-  background: #FFE7FE;
-  color: #e070dd;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: none;
+  background-color: #FFE7FE;
+  color: #fff;
   cursor: pointer;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+  z-index: 1;
+  text-decoration: none;
+  background-image: linear-gradient(45deg, #e070dd, #dde8b5);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(circle closest-side, #e070dd, transparent);
+  transform: translate(-30%, -30%);
+  z-index: -1;
 }
 
 .btn:hover {
-  background: #e070dd;
-  color: #fff;
+  background-color: #ecaaea;
+  color: #d6eb83;
 }
+
+.btn:active {
+  transform: scale(0.95);
+}
+
 
 .header {
   position: -webkit-sticky;
@@ -101,7 +131,7 @@ section {
   background: #fff;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  padding: 2rem 10%;
+  padding: 1.0rem 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,10 +147,16 @@ section {
   text-transform: capitalize;
   color: #444;
   font-weight: bolder;
+  text-decoration: none;
 }
 
 .header .logo i {
   color: #e070dd;
+  text-decoration: none;
+}
+
+.header .logo:hover {
+  text-decoration: none;
 }
 
 .header .navbar {
@@ -144,9 +180,10 @@ section {
 
 .header .navbar a {
   margin-right: 2rem;
-  font-size: 2rem;
+  font-size: 1.9rem;
   text-transform: capitalize;
   color: #444;
+  text-decoration: none;
 }
 
 .header .navbar a:hover {
@@ -177,7 +214,6 @@ section {
    justify-content: center;
    width: 100%;
    height: 10vh;
-   /* background-color: #FFE7FE; */
    padding: 10px;
  }
 
@@ -186,22 +222,6 @@ section {
  }
 
 
-.containerbackground {
-     margin: 3rem;
-     position: absolute;
-     top: -20%;
-     left: -20%;
-     bottom: -20%;
-     right: -20%;
-     z-index: -1;
-     transform: rotate(0deg);
-     color: #c6afaf;
-     font-size: 10rem;
-     line-height: 1.2;
-     text-align: center;
-     padding: 1rem;
-     opacity: 0.2;
-   }
 
  .about-title {
  position: relative;
@@ -273,6 +293,26 @@ section {
   }
 }
 
+/* Keyframes for zooming out */
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+/* Keyframes for fading */
+@keyframes fade {
+  0%, 20%, 80%, 100% {
+    opacity: 0;
+  }
+  30%, 70% {
+    opacity: 1;
+  }
+}
+
 
 @media (max-width: 768px) {
   .top-btn {
@@ -289,51 +329,45 @@ section {
 }
 
 
+/* Scroll-div will stick to the top of the viewport but its content will be centered */
 .scroll-div {
   position: -webkit-sticky;
- position: sticky;
- top: 0;
- left: 0;
- right: 0;
- background: #fff;
- -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
- padding: 2rem 10%;
- display: -webkit-box;
- display: -ms-flexbox;
- display: flex;
- -webkit-box-align: center;
-     -ms-flex-align: center;
-         align-items: center;
- z-index: 1000;
- white-space: nowrap;
- overflow: hidden;
- background-color: #671470;
-}
-  .scroll-text {
- position: fixed;
- width: 100%;
- top: 0;
- right: 0;
- white-space: nowrap;
- overflow: hidden;
- animation: scroll 30s linear infinite;
- color: #fff;
- display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden;
+  background-color: #671470;
 }
 
-.scroll-text h1{
-  font-size: 1.7rem;
+.scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 45s linear infinite;
+  color: #fff;
+}
+
+.scroll-text h1 {
+  font-size: 1.5rem;
   color: #fff;
 }
 
 @keyframes scroll {
- 0% {
-   transform: translateX(100%);
- }
- 100% {
-   transform: translateX(-100%);
- }
+  0% { transform: translateX(100%); } /* Start off-screen to the right */
+  100% { transform: translateX(-100%); } /* End off-screen to the left */
 }
 
 .account-form {
@@ -446,6 +480,56 @@ section {
   color: #fff;
 }
 
+/**Admission Hero Starts**/
+.hero-title {
+  color: #fff;
+  font-size: 3rem; /* Adjusted from 5rem for better responsiveness */
+  margin-bottom: 20px;
+  text-align: right;
+  padding: 0 20px;
+  z-index: 1; /* Ensuring the text is on top */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Adds shadow to make text stand out more */
+
+}
+
+.hero-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #ddd;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: 1rem; /* Adjusted for better readability on smaller screens */
+  border-radius: 10px; /* Optional: To soften the text box edges */
+  z-index: 1; /* Ensuring the text is on top */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem; /* Reduce title size on tablets */
+    padding-top: 10vh;
+  }
+
+  .hero-text {
+    font-size: 0.5rem; /* Reduce text size on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem; /* Further reduce title size on mobile */
+  }
+
+  .hero-text {
+    font-size: 0.8rem; /* Further reduce text size on mobile */
+    padding: 10px; /* Reduce padding on mobile */
+  }
+}
+
+/** Admission Hero Ends**/
+
 .home {
   padding: 0;
 }
@@ -484,6 +568,240 @@ section {
 .swiper-pagination-bullet-active {
   background: #e070dd;
 }
+
+/*News Section Style*/
+.news-section {
+  background: linear-gradient(to right, #e0a3cc, #f6e3e9); /* Purple to light pink gradient */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.news-item {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-item h3 {
+  font-size: 1.8em;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.news-item .btn {
+  align-self: flex-start;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #e070dd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.news-item .btn:hover {
+  background-color: #c05db8;
+}
+
+/**News Ends**/
+
+/**About Us Mission and Vision**/
+/* Mission, Vision, Values Sections */
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* About Header Section */
+.about-header {
+  height: 70vh;
+  background: url('../images/wids2.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.about-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.about-header .container {
+  z-index: 1;
+}
+
+.about-header-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-header-subtitle {
+  font-size: 1.5rem;
+}
+
+.about-header {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomOut 8s ease-in-out forwards, fade 8s ease-in-out;
+  opacity: 0;
+}
+
+.image-container img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.mission, .vision, .values {
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.mission h2, .vision h2, .values h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.mission p, .vision p, .values p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.value-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-10px);
+}
+
+.value-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e070dd;
+}
+
+.value-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Team Section */
+.team {
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+/**About us M&S ends**/
 
 .subjects .box-container {
   display: -ms-grid;
@@ -585,6 +903,8 @@ section {
   background: #444;
 }
 
+
+
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -676,6 +996,32 @@ section {
   line-height: 2;
   color: #777;
 }
+
+    /* Container to maintain 4:3 aspect ratio */
+    .imgbox {
+      position: relative;
+      width: 80%; /* Adjust width as needed */
+      padding-top: 50%; /* 4:3 Aspect Ratio */
+      overflow: hidden;
+      margin: auto; /* Centering if desired */
+    }
+
+    /* Position both images on top of each other */
+    .imgbox img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image covers the container */
+      transition: opacity 1s ease-in-out; /* Transition for fade effect */
+      opacity: 0; /* Start with hidden */
+    }
+
+    .imgbox img.current {
+      opacity: 1; /* Make the current image visible */
+    }
+
 
 .teachers .slide {
   text-align: center;
@@ -881,46 +1227,6 @@ section {
   text-align: center;
 }
 
-.contact .icons-container {
-  margin-bottom: 3rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2rem;
-}
-
-.contact .icons-container .icons {
-  text-align: center;
-  padding: 3rem 2rem;
-  border: 0.1rem solid #e070dd;
-  background: #FFE7FE;
-}
-
-.contact .icons-container .icons i {
-  height: 6rem;
-  width: 6rem;
-  line-height: 6rem;
-  font-size: 2rem;
-  border-radius: 50%;
-  margin-bottom: .5rem;
-  color: #fff;
-  background: #e070dd;
-}
-
-.contact .icons-container .icons h3 {
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: #444;
-  padding: .5rem 0;
-}
-
-.contact .icons-container .icons p {
-  font-size: 1.5rem;
-  line-height: 2;
-  color: #777;
-}
-
 .contact .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1108,15 +1414,17 @@ section {
   line-height: 4.5rem;
   font-size: 1.7rem;
   background-color: #e070dd;
-  color: #fff;
+  color: #F8F8FF;
   margin-right: .3rem;
   text-align: center;
   border-radius: 15%;
   box-shadow: 0 0 1px rgb(132, 132, 132);
+  background-image: linear-gradient(45deg, #e070dd, #dde8b5);
 }
 
 .footer .box-container .box .share a:hover {
   background-color: #444;
+  color: #fff;
 }
 
 .footer .box-container .box .link {
@@ -1160,6 +1468,21 @@ section {
 
 .footer .credit span {
   color: #e070dd;
+}
+
+@media screen and (max-width: 768px) {
+  .intro-section {
+     flex-direction: column;
+  }
+  .intro-section div:last-child {
+     width: 100%;
+  }
+  .news-item {
+    text-align: center;
+  }
+  .news-item .btn {
+    align-self: center;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1235,5 +1558,17 @@ section {
   .about .content .about-title {
     font-size: 4rem;
   }
+  .news-section {
+    padding: 20px 10px;
+  }
+  .news-item h3 {
+    font-size: 1.5em;
+  }
+  .news-item p {
+    font-size: 1em;
+  }
+  .news-item .btn {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
 }
-/*# sourceMappingURL=style.css.map */

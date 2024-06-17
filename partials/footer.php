@@ -13,7 +13,7 @@
             <a href="#" class="fa-brands fa-twitter"></a>
             <a href="https://www.instagram.com/royalcoastacademy/" class="fa-brands fa-instagram"></a>
             <a href="#" class="fa-brands fa-linkedin"></a>
-            <a href="#" class="fa-brands fa-whatsapp"></a>
+            <a href="https://wa.me/+2348027664776" class="fa-brands fa-whatsapp"></a>
          </div>
       </div>
 

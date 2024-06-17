@@ -1,10 +1,108 @@
-<?php include_once "partials/header.php"; ?>
+<?php include_once "partials/header.php"; 
+   // Define an array of news and events
+$newsAndEvents = [
+   [
+       "image" => "images/wids2.jpg",
+       "category" => "Arts and Culture",
+       "title" => "Cultural Day 2023",
+       "description" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!",
+       "modules" => 12,
+       "time" => "6 hours ago"
+   ],
+   [
+       "image" => "images/wids.jpg",
+       "category" => "Engineering",
+       "title" => "Career Day 2023",
+       "description" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!",
+       "modules" => 12,
+       "time" => "6 hours ago"
+   ],
+   [
+       "image" => "images/wids2.jpg",
+       "category" => "Mathematics",
+       "title" => "End of the Year Party 2022",
+       "description" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!",
+       "modules" => 12,
+       "time" => "6 hours ago"
+   ],
+   [
+       "image" => "images/wids2.jpg",
+       "category" => "Doctor",
+       "title" => "Field Trip 2022",
+       "description" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!",
+       "modules" => 12,
+       "time" => "6 hours ago"
+   ],
+   [
+       "image" => "images/wids.jpg",
+       "category" => "Science",
+       "title" => "Inter House Sports",
+       "description" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!",
+       "modules" => 12,
+       "time" => "6 hours ago"
+   ],
+   [
+       "image" => "images/wids2.jpg",
+       "category" => "Business",
+       "title" => "Science Fair 2023",
+       "description" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!",
+       "modules" => 12,
+       "time" => "6 hours ago"
+   ],
+   [
+       "image" => "images/wids2.jpg",
+       "category" => "Teaching",
+       "title" => "Science Fair 2023",
+       "description" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!",
+       "modules" => 12,
+       "time" => "6 hours ago"
+   ],
+   [
+       "image" => "images/wids2.jpg",
+       "category" => "Designing",
+       "title" => "Choose What's Best for You!",
+       "description" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!",
+       "modules" => 12,
+       "time" => "6 hours ago"
+   ],
+   [
+       "image" => "images/wids2.jpg",
+       "category" => "Dancing",
+       "title" => "Choose What's Best for You!",
+       "description" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!",
+       "modules" => 12,
+       "time" => "6 hours ago"
+   ]
+];
+
+// Function to display news and events
+function displayNewsAndEvents($items) {
+   foreach ($items as $item) {
+       echo '
+       <div class="box">
+           <div class="image">
+               <img src="' . $item["image"] . '" alt="">
+               <h3>' . $item["category"] . '</h3>
+           </div>
+           <div class="content">
+               <h3>' . $item["title"] . '</h3>
+               <p>' . $item["description"] . '</p>
+               <a href="#" class="btn">read more</a>
+               <div class="icons">
+                   <span> <i class="fas fa-book"></i> ' . $item["modules"] . ' modules </span>
+                   <span> <i class="fas fa-clock"></i> ' . $item["time"] . ' </span>
+               </div>
+           </div>
+       </div>';
+   }
+}
+?>
 
 <!-- header section ends -->
 
 <section class="heading-link">
    <h3>Events</h3>
-   <p> <a href="home.html">home</a> / events </p>
+   <p> <a href="index.php">home</a> / events </p>
 </section>
 
 <section class="courses">
@@ -15,7 +113,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/course-2-1.jpg" alt="">
+            <img src="images/wids2.jpg" alt="">
             <h3>Arts and Culture</h3>
          </div>
          <div class="content">
@@ -31,7 +129,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/course-2-2.jpg" alt="">
+            <img src="images/wids.jpg" alt="">
             <h3>engineering</h3>
          </div>
          <div class="content">
@@ -47,7 +145,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/course-2-3.jpg" alt="">
+            <img src="images/wids2.jpg" alt="">
             <h3>mathemetics</h3>
          </div>
          <div class="content">
@@ -63,7 +161,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/course-2-4.jpg" alt="">
+            <img src="images/wids2.jpg" alt="">
             <h3>doctor</h3>
          </div>
          <div class="content">
@@ -79,11 +177,11 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/course-2-5.jpg" alt="">
+            <img src="images/wids.jpg" alt="">
             <h3>science</h3>
          </div>
          <div class="content">
-            <h3>choose what's best for you!</h3>
+            <h3>Inter house Sports</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
             <a href="#" class="btn">read more</a>
             <div class="icons">
@@ -95,11 +193,11 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/course-2-6.jpg" alt="">
+            <img src="images/wids2.jpg" alt="">
             <h3>business</h3>
          </div>
          <div class="content">
-            <h3>choose what's best for you!</h3>
+            <h3>Science Fair 2023</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
             <a href="#" class="btn">read more</a>
             <div class="icons">
@@ -111,11 +209,11 @@
 
       <div class="box hide">
          <div class="image">
-            <img src="images/course-2-7.jpg" alt="">
+            <img src="images/wids2.jpg" alt="">
             <h3>teaching</h3>
          </div>
          <div class="content">
-            <h3>choose what's best for you!</h3>
+            <h3>Science Fair 2023</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
             <a href="#" class="btn">read more</a>
             <div class="icons">
@@ -127,7 +225,7 @@
 
       <div class="box hide">
          <div class="image">
-            <img src="images/course-2-8.jpg" alt="">
+            <img src="images/wids2.jpg" alt="">
             <h3>designing</h3>
          </div>
          <div class="content">
@@ -143,7 +241,7 @@
 
       <div class="box hide">
          <div class="image">
-            <img src="images/course-2-9.jpg" alt="">
+            <img src="images/wids2.jpg" alt="">
             <h3>dancing</h3>
          </div>
          <div class="content">

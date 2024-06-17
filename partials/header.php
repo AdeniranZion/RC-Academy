@@ -4,10 +4,13 @@
   <head>
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-R8rHrSyN1bJ58gvc/mwMMJ8e4+HWH1e4Y1G5jJtFQOaxo0cSyzkkPfwGH0w3qZ1zGZlFwhRv/QJMS1pd8yJtxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 <link rel="stylesheet" href="css/qlstyle.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
 
   <title>Royal Coast Academy</title>
     <!-- Required meta tags -->
@@ -16,8 +19,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
 
    <!-- swiper css link  -->
    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -38,16 +39,23 @@
 
 <!-- header section starts  -->
 <div class="scroll-div">
-   <div class="scroll-text">
-      <h1>Have any questions? <i class="fa-solid fa-phone"></i> +2348027664776 +2347059695895 +2349030009521 royalcoastacademy@gmail.com</h1>
-   </div>
-</div>
+    <div class="scroll-wrapper">
+      <div class="scroll-text">
+        <h1>Have any questions? <i class="fa-solid fa-phone"></i> Call us on +2348027664776 +2347059695895 +2349030009521 <i class="fa-solid fa-envelope"></i> royalcoastacademy@gmail.com or Visit us @ 10 Oluwole Daramola Crescent, Isheri Oke 102109, Ojodu Berger, Ogun State.</h1>
+      </div>
+    </div>
+  </div>
+
 
 
 <header class="header">
 
 
-   <a href="#" class="logo"> <img style="margin-bottom: -3%;" src="images/RCALogo.png" width="45"> Royal Coast Academy </a>
+   <a href="#" class="logo">
+      <img src="images/RCALogo.png" width="45" alt="Royal Coast Academy Logo">
+      Royal Coast Academy
+   </a>
+
 
    <nav class="navbar">
 
@@ -59,9 +67,9 @@
             $links = array(
                array('text' => 'HOME', 'href' => 'index.php'),
                array('text' => 'ABOUT US', 'href' => 'about.php'),
-               array('text' => 'COURSES', 'href' => 'courses.php'),
+               array('text' => 'ADMISSIONS', 'href' => 'admissions.php'),
+               array('text' => 'EVENTS', 'href' => 'calender.php'),
                array('text' => 'CONTACT US', 'href' => 'contact.php'),
-               array('text' => 'EVENTS', 'href' => 'calender.php')
              );
 
             
@@ -77,7 +85,6 @@
    </nav>
 
    <div class="icons">
-      <div id="account-btn" class="fa-solid fa-user"></div>
       <div id="menu-btn" class="fa-solid fa-bars"></div>
    </div>
 
@@ -85,7 +92,7 @@
 
 <!-- account form section starts  -->
 
-<div class="account-form">
+<!-- <div class="account-form">
 
    <div id="close-form" class="fas fa-times"></div>
 
@@ -112,7 +119,7 @@
       <input type="password" placeholder="enter your password" class="box">
       <input type="password" placeholder="confirm your password" class="box">
       <input type="submit" value="register now" class="btn">
-   </form>
+   </form> -->
 
    <!-- account form section ends -->
 
