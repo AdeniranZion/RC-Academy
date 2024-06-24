@@ -41,7 +41,7 @@
 <div class="scroll-div">
     <div class="scroll-wrapper">
       <div class="scroll-text">
-        <h1>Have any questions? <i class="fa-solid fa-phone"></i> Call us on +2348027664776 +2347059695895 +2349030009521 <i class="fa-solid fa-envelope"></i> royalcoastacademy@gmail.com or Visit us @ 10 Oluwole Daramola Crescent, Isheri Oke 102109, Ojodu Berger, Ogun State.</h1>
+        <h1>Have any questions? <i class="fa-solid fa-phone"></i> Call us on +2348027664776 +2347059695895 +2349030009521 <i class="fa-solid fa-envelope"></i> royalcoastacademy@gmail.com or <i class="fa-solid fa-location-dot"></i> Visit us @ 10 Oluwole Daramola Crescent, Isheri Oke 102109, Ojodu Berger, Ogun State.</h1>
       </div>
     </div>
   </div>
@@ -60,25 +60,44 @@
    <nav class="navbar">
 
          <div id="close-navbar" class="fa-sharp fa-solid fa-xmark"></div>
-         <?php
 
-            $file_names = ['index.php', 'calender.php', 'contact.php', 'about.php', 'courses.php'];
+         <?php
+            $file_names = ['index.php', 'calendar.php', 'contact.php', 'about.php', 'courses.php', 'admissions.php', 'admission_form.php'];
             $current_page = basename($_SERVER['PHP_SELF']);
             $links = array(
                array('text' => 'HOME', 'href' => 'index.php'),
                array('text' => 'ABOUT US', 'href' => 'about.php'),
                array('text' => 'ADMISSIONS', 'href' => 'admissions.php'),
-               array('text' => 'EVENTS', 'href' => 'calender.php'),
+               array('text' => 'EVENTS', 'href' => 'calendar.php'),
                array('text' => 'CONTACT US', 'href' => 'contact.php'),
-             );
+            );
 
-            
+            echo '<nav>'; // Start the navigation container
 
-             foreach ($links as $link) {
-               $style = ($link['href'] == $current_page) ? 'style="color: #f670f2;"' : '';
-               echo '<a href="' . $link['href'] . '" ' . $style . '>' . $link['text'] . '</a>';
+            foreach ($links as $link) {
+               // Check if the link is the current page or if it's the admissions link when on admission_form.php
+               $style = ($link['href'] == $current_page || ($link['href'] == 'admissions.php' && $current_page == 'admission_form.php')) ? 'style="color: #e070dd;"' : '';
+
+               if ($link['text'] == 'ADMISSIONS') {
+                  echo '<div class="dropdown">';
+                  echo '<a href="' . $link['href'] . '" ' . $style . '>' . $link['text'] . '</a>';
+                  echo '<div class="dropdown-content">';
+                  
+                  // Set style for dropdown links, excluding the current page
+                  echo '<a href="admission_form.php"' . ($current_page == 'admission_form.php' ? ' style="color: #e070dd;"' : '') . '>Admission Form</a>';
+                  echo '<a href="admissions.php"' . ($current_page == 'admissions.php' ? ' style="color: #e070dd;"' : '') . '>Admission Details</a>';
+                  
+                  echo '</div>';
+                  echo '</div>';
+               } else {
+                     echo '<a href="' . $link['href'] . '" ' . $style . '>' . $link['text'] . '</a>';
+               }
              }
-         ?>
+
+            echo '</nav>'; // End the navigation container
+?>
+
+
 
       
 
@@ -90,41 +109,6 @@
 
 </header>
 
-<!-- account form section starts  -->
-
-<!-- <div class="account-form">
-
-   <div id="close-form" class="fas fa-times"></div>
-
-   <div class="buttons">
-      <span class="btn active login-btn">login</span>
-      <span class="btn register-btn">register</span>
-   </div>
-
-   <form class="login-form active" action="">
-      <h3>login now</h3>
-      <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
-      <div class="flex">
-         <input type="checkbox" name="" id="remember-me">
-         <label for="remember-me">remember me</label>
-         <a href="#">forgot password?</a>
-      </div>
-      <input type="submit" value="login now" class="btn">
-   </form>
-
-   <form class="register-form" action="">
-      <h3>register now</h3>
-      <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
-      <input type="password" placeholder="confirm your password" class="box">
-      <input type="submit" value="register now" class="btn">
-   </form> -->
-
-   <!-- account form section ends -->
-
-<!-- header section ends -->
-</div>
 
 <script>
     AOS.init({

@@ -1,7 +1,69 @@
 <?php include_once "partials/header.php"; ?>
 
+    <title>404 Not Found</title>
+    <style>
+      
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+        }
 
+        .container h2 {
+            font-size: 3.5rem;
+            font-weight: bolder;
+            margin: 1rem 0;
+        }
+
+        .container p {
+            font-size: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .container .image {
+            margin: 2rem 0;
+        }
+
+        .container .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .button{
+          color: #061c30;
+        }
+
+        @media (max-width: 600px) {
+            .container h1 {
+                font-size: 6rem;
+            }
+
+            .container h2 {
+                font-size: 3rem;
+            }
+
+            .container p {
+                font-size: 1.8rem;
+            }
+
+            .container .button {
+                font-size: 1rem;
+                padding: 0.6rem 1.5rem;
+            }
+        }
+    </style>
+</head>
 <body>
+    <div class="container">
+        <h2>Oops!</h2>
+        <div class="image">
+            <img src="images/undraw_Page_not_found_re_e9o6.png" alt="404 Illustration">
+        </div>
+        <p>The page you are looking for doesn’t exist or has been moved.</p>
+        <a href="#" class="btn" onclick="history.back(); return false;">Go Back</a>
+      </div>
+</body>
+</html>
+
 
 <script>
     AOS.init({
@@ -11,30 +73,5 @@
         once: true, // only animate elements once on page load
     });
   </script>
-
-
-
-<div class="floating-objects">
-    <div class="floating-object"></div>
-    <div class="floating-object"></div>
-    <div class="floating-object"></div>
-    <div class="floating-object"></div>
-    <div class="floating-object"></div>
-    <div class="floating-object"></div>
-    <div class="floating-object"></div>
-    <div class="floating-object"></div>
-    <div class="hexagon"></div>
-  </div>
-
-  <main>
-    <section class="hero" data-aos="fade-up" data-aos-duration="1000">
-      <h1>This page is currently unavailable</h1>
-      <p>This page is still under construction</p>
-      <a href="index.php" class="btn2">Go back</a>
-
-  </main>
- 
-</body>
-</html>
 
 

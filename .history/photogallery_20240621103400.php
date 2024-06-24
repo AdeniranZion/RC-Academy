@@ -1,0 +1,285 @@
+<?php include_once "partials/header.php"; ?>
+
+<?php
+    // Define image details (could be retrieved from a database)
+    function get_image_details($filename) {
+        $details = [
+            'IMG-20240616-WA0030.jpg' => ['title' => 'School Event', 'description' => 'A fun event at our school.'],
+            'IMG-20240616-WA0039.jpg' => ['title' => 'Best Science Project', 'description' => 'Awarded for an innovative project at the Science Fair.'],
+            // Add more image details as needed...
+        ];
+
+        return $details[$filename] ?? ['title' => 'Unknown', 'description' => 'No description available.'];
+    }
+
+    // Load images based on the page and handle AJAX requests
+    function load_images($page) {
+        $imagesPerPage = 6;
+        $imageDir = 'images/'; // The directory containing your images
+        $images = glob($imageDir . 'IMG-202*.jpg'); // Get all jpg images starting with IMG-202 in the directory
+
+        $totalImages = count($images);
+        $startIndex = ($page - 1) * $imagesPerPage;
+        $endIndex = $startIndex + $imagesPerPage;
+        $hasMore = $endIndex < $totalImages;
+        $hasLess = $page > 1;
+
+        $imagesToLoad = array_slice($images, $startIndex, $imagesPerPage);
+        $imageData = [];
+
+        foreach ($imagesToLoad as $image) {
+            $filename = basename($image);
+            $details = get_image_details($filename);
+            $imageData[] = [
+                'url' => $image,
+                'filename' => $filename,
+                'title' => $details['title'],
+                'description' => $details['description']
+            ];
+        }
+
+        return [
+            'images' => $imageData,
+            'hasMore' => $hasMore,
+            'hasLess' => $hasLess
+        ];
+    }
+
+    // Handle AJAX request
+    if (isset($_GET['page'])) {
+        header('Content-Type: application/json');
+        echo json_encode(load_images((int)$_GET['page']));
+        exit;
+    }
+?>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.14/css/lightgallery.min.css" integrity="sha384-3H5qqmDTB6/ZBG5aw+DxLtTqNYyEKshc+MK5G6qAtC6axGpT2GZvg1ewHf6E8P88" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.14/js/lightgallery.min.js" integrity="sha384-Ay9kkXZFOwvFtDrK3/6kznvB68pThk1me6XJhSpqlkXU7CB2obLR7ux9GPn5V9Pd" crossorigin="anonymous"></script>
+
+    <title>School Photo Gallery</title>
+    <style>
+        /* Existing CSS styles omitted for brevity */
+        .photobody {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .gallery-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .expanded-container {
+            position: relative;
+            display: none;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .expanded-container.active {
+            display: block;
+        }
+
+        .expanded-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .expanded-details {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .expanded-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .expanded-description {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .button {
+            padding: 10px 25px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%;
+            }
+
+            .expanded-container {
+                width: 90%;
+            }
+        }
+            /* New styles for Award Section */
+            .award-section {
+                max-width: 1500px;
+                width: 100%;
+                text-align: center;
+                margin-top: 50px;
+                /* padding: 20px; */
+            }
+
+            .award-section h2 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .award-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+                justify-items: center;
+            }
+
+            .award-card {
+                width: 90%;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .award-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            .award-image {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                object-position: top; /* Ensure faces are at the top */
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            .award-details {
+                padding: 15px;
+                text-align: left;
+            }
+
+            .award-title {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                color: #333;
+            }
+
+            .award-description {
+                font-size: 1rem;
+                color: #666;
+            }
+        </style>
+</head>
+<body>
+        <section class="photobody">
+                <div class="gallery-container" data-aos="fade-left" data-aos-duration="1200">
+                    <h1>Our Photo Gallery</h1>
+                    <div id="gallery" class="gallery" data-aos="fade-left" data-aos-duration="1200">
+                        <!-- Images will be loaded here by JavaScript -->
+                </div>
+                <div class="buttons">
+                    <button id="load-less" class="button">Load Less</button>
+                    <button id="load-more" class="button">Load More</button>
+                </div>
+            </div>
+
+            <!-- Expanded Image and Details Container -->
+            <div id="expanded-container" class="expanded-container">
+                <img id="expanded-image" class="expanded-image" src="" alt="">
+                <div class="expanded-details">
+                    <h2 id="expanded-title" class="expanded-title"></h2>
+                    <p id="expanded-description" class="expanded-description"></p>
+                </div>
+            </div>
+
+            <!-- Award Section -->
+            <section class="award-section">
+                <h1>Our Award-Winning Students</h1>
+                <div class="award-container" id="award-container">
+                    <!-- Awards will be loaded here by JavaScript -->
+                </div>
+            </section>
+        </section>
+
+
+
+    <script>
+        
+    </script>
+
+<?php include_once "partials/footer.php"; ?>
+
+</body>
+</html>
