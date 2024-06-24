@@ -1,5 +1,5 @@
 ﻿# RC-Academy
- Welcome to the official repository for the School Website project. This repository contains the source code and assets for our school's website.
+ Welcome to the official repository for the Royal Coast Academy Website project. This repository contains the source code and assets for our school's website.
 
 Table of Contents
 About
